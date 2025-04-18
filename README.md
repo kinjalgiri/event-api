@@ -46,7 +46,7 @@ event-api/
 
 ---
 
-## ✅ 5. Laravel `.env` Configuration
+## ✅ 2. Laravel `.env` Configuration
 
 Copy `.env.example` and save as `.env`
 ```bash
@@ -72,7 +72,7 @@ DB_PASSWORD=csv_pass
 
 ---
 
-## ✅ 6. Build & Run Everything
+## ✅ 3. Build & Run Everything
 
 ```bash
 docker-compose up -d --build
@@ -80,7 +80,7 @@ docker-compose up -d --build
 
 ---
 
-## ✅ 7. Laravel Setup (inside container)
+## ✅ 4. Laravel Setup (inside container)
 
 On Host system, command line:
 
