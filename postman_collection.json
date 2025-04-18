@@ -1,0 +1,345 @@
+{
+    "info": {
+      "name": "Event Booking System API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Events",
+        "item": [
+          {
+            "name": "List Events",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{auth_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/events",
+                "host": ["{{base_url}}"],
+                "path": ["api", "events"]
+              }
+            }
+          },
+          {
+            "name": "Create Event",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{auth_token}}"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"title\": \"Tech Conference 2023\",\n    \"description\": \"Annual technology conference\",\n    \"start_date\": \"2023-11-15 09:00:00\",\n    \"end_date\": \"2023-11-17 18:00:00\",\n    \"capacity\": 500,\n    \"country\": \"USA\",\n    \"city\": \"San Francisco\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/events",
+                "host": ["{{base_url}}"],
+                "path": ["api", "events"]
+              }
+            }
+          },
+          {
+            "name": "Get Event",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{auth_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/events/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "events", "1"]
+              }
+            }
+          },
+          {
+            "name": "Update Event",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{auth_token}}"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"title\": \"Updated Tech Conference 2023\",\n    \"capacity\": 600\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/events/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "events", "1"]
+              }
+            }
+          },
+          {
+            "name": "Delete Event",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{auth_token}}"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/events/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "events", "1"]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Attendees",
+        "item": [
+          {
+            "name": "List Attendees",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/attendees",
+                "host": ["{{base_url}}"],
+                "path": ["api", "attendees"]
+              }
+            }
+          },
+          {
+            "name": "Create Attendee",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"phone\": \"+1234567890\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/attendees",
+                "host": ["{{base_url}}"],
+                "path": ["api", "attendees"]
+              }
+            }
+          },
+          {
+            "name": "Get Attendee",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/attendees/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "attendees", "1"]
+              }
+            }
+          },
+          {
+            "name": "Update Attendee",
+            "request": {
+              "method": "PUT",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"name\": \"John Updated\",\n    \"phone\": \"+0987654321\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/attendees/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "attendees", "1"]
+              }
+            }
+          },
+          {
+            "name": "Delete Attendee",
+            "request": {
+              "method": "DELETE",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/attendees/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "attendees", "1"]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Bookings",
+        "item": [
+          {
+            "name": "List Bookings",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/bookings",
+                "host": ["{{base_url}}"],
+                "path": ["api", "bookings"]
+              }
+            }
+          },
+          {
+            "name": "Create Booking",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"event_id\": 1,\n    \"name\": \"John Doe\",\n    \"email\": \"john.doe@example.com\",\n    \"phone\": \"+1234567890\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/bookings",
+                "host": ["{{base_url}}"],
+                "path": ["api", "bookings"]
+              }
+            }
+          },
+          {
+            "name": "Get Booking",
+            "request": {
+              "method": "GET",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                }
+              ],
+              "url": {
+                "raw": "{{base_url}}/api/bookings/1",
+                "host": ["{{base_url}}"],
+                "path": ["api", "bookings", "1"]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Authentication",
+        "item": [
+          {
+            "name": "Login (Get Token)",
+            "request": {
+              "method": "POST",
+              "header": [
+                {
+                  "key": "Accept",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"password\",\n    \"device_name\": \"postman\"\n}"
+              },
+              "url": {
+                "raw": "{{base_url}}/api/login",
+                "host": ["{{base_url}}"],
+                "path": ["api", "login"]
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "variable": [
+      {
+        "key": "base_url",
+        "value": "http://localhost:8000"
+      },
+      {
+        "key": "auth_token",
+        "value": ""
+      }
+    ],
+    "auth": null
+  }
