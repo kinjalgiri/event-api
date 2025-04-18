@@ -48,6 +48,11 @@ event-api/
 
 ## ✅ 5. Laravel `.env` Configuration
 
+Copy `.env.example` and save as `.env`
+```bash
+cp .env.example .env
+```
+
 Update your `.env`:
 
 ```env
@@ -94,6 +99,12 @@ php artisan key:generate
 php artisan migrate
 ```
 
+Run Tests:
+
+```bash
+php artisan test
+```
+
 Now event api is available at:
 👉 http://localhost:9001/api
 
@@ -107,4 +118,36 @@ Now event api is available at:
 ## Database Schema
 <img src="ddl.png" alt="Responsive image" width="100%" />
 
+## Postman Collection:
+[Download Event Booking System API Postmand Collection](https://raw.githubusercontent.com/kinjalgiri/event-api/refs/heads/main/Event%20Booking%20System%20API.postman_collection.json)
+
+## What's included:
+
+1. **Database Design**:
+   - Appropriate indexes and constraints
+   - Relationship management
+
+2. **Application Architecture**:
+   - MVC pattern
+   - Repository pattern (could be extended)
+   - Service layer for business logic
+   - DTOs for request/response formatting
+
+3. **Validation**:
+   - Form request validation
+   - Business rule validation (capacity, duplicates)
+   - Database transaction management
+
+4. **Error Handling**:
+   - Consistent error responses
+   - Proper HTTP status codes
+   - Exception handling
+
+5. **Testing**:
+   - Unit tests for service
+   - Feature tests for API endpoints
+
+6. **Security**:
+   - Input validation
+   - Authentication ready (Sanctum)
 ---
